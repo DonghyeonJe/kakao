@@ -1,42 +1,25 @@
-* {
-  border: 2px dashed black;
-}
-
 div {
-  padding: 20px;
-
   /* block은 margin,paddinm,border 사용가능 */
   /* inline은 높이와 넓이가 없음 강제로 바꿔주게되면 화면에 출력안됨  */
+  /* 대신 좌우로는 margin이 적용됨 */
   /* collapsing margins 현상은  body와 div의 경계가 같을때 일어나고 그때 두박스(div&body)의 margin이 하나가 됨 위아래에서만 일어남    */
 }
-span {
-  background-color: tomato;
-  display: block;
-  border-style: dotted;
+.btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.teal {
+  background-color: teal;
 }
 
 html {
-  background-color: blue;
 }
 
 body {
-  padding: 20px;
   margin: 20px;
-  background-color: thistle;
 }
 
-#first {
-  background-color: aliceblue;
-  width: 150px;
-  height: 150px;
-}
-#second {
-  background-color: blueviolet;
-  width: 100px;
-  height: 100px;
-}
-#third {
-  background-color: darkcyan;
-  width: 50px;
-  height: 50px;
+.tomato {
+  background-color: tomato;
+  color: white;
 }
