@@ -13,39 +13,49 @@
         margin: 50px;
       }
       div {
-        width: 300px;
-        height: 300px;
-        background-color: wheat;
-        position: relative;
-
         /* block은 margin,paddinm,border 사용가능 */
         /* inline은 높이와 넓이가 없음 강제로 바꿔주게되면 화면에 출력안됨  */
         /* 대신 좌우로는 margin이 적용됨 */
         /* collapsing margins 현상은  body와 div의 경계가 같을때 일어나고 그때 두박스(div&body)의 margin이 하나가 됨 위아래에서만 일어남    */
       }
-      input:required {
-        border: 1px solid tomato;
-      }
-      input:optional {
-        border: 1px solid teal;
-      }
-      input {
-        border: 1px solid wheat;
-      }
-      input[placeholder~="name"] {
-        background-color: thistle;
-      }
 
+      /*  form:focus-within {
+        boder-color: seagreen;
+      } input들 중 하나가 focused가 되면 form의 모습을 바꾼다는뜻*/
       /* +는 바로뒤 >는 부모자식 관계 ~는 형제관계 바로뒤에 올필요 없음 */
       /* attribute 지정할때 ex  input[placeholder~="name"] {} 처럼 하면 name이 포함된 모든 곳에 css */
+      p::first-letter {
+        background-color: yellowgreen;
+        color: white;
+        font-size: 50px;
+      }
+      /* hover 마우스가 위에 올라갔을때
+         active 어떤걸 클릭하고 있을때
+         focus 어떤 엘리먼트가 focus되어 있을때
+         visited 방문한 페이지
+         focus-within은 focus 상태인 자식을 가진 부모 엘리먼트에 적용
+          */
+
+      /* 메인컬러 지정해서 이용하는법 
+          -- text -  text 규칙으로 짓는다. 
+          ex)root:{
+              --main--color:
+              --default-border: 1px solid var(--main-color);
+          }
+          p{
+            background-color: var(--main--color);
+            border: var(--main-color);
+          } */
     </style>
   </head>
   <body>
-    <form>
-      <input type="text" placeholder="First name" />
-      <input type="text" placeholder="Last name" />
-      <input type="password" required placeholder="username" />
-    </form>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      similique ut vitae nihil veritatis sapiente facilis, suscipit, aliquam
+      magnam, tempore quisquam? Atque molestias cum itaque odio ab expedita
+      quasi ad?
+    </p>
+
     <!-- boder는 inline과 block에 모두 적용됨 -->
     <!--inline은 높이와 넓이가 적용 안됨   -->
     <!-- 옆에 다른요소가 올수 있는걸 inline이라고 하고 못오는걸 block이라고 한다.  -->
