@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+      div {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (min-width: 600px) and (max-width: 1200px) and (orientation: landscape) {
+        div {
+          background-color: tomato;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        span {
+          display: none;
+        }
+      }
+
+      /* transition을 적용하려면 해당 효과가 있어야됨 
+      예를들어 호버에 color하고 background-color만 있으니 
+      둘만 변경됨 
+      transition은 root/element 에만 있어야됨
+      trainstion은 state에 따라 바뀌는 property를 갖고있으면 사용가능*/
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <span>폰을 재대로 기울이세요.</span>
+  </body>
+</html>
