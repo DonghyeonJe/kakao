@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;600&display=swap");
+@import "reset.css";
+@import "variables.css";
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+/* Screens */
+@import "screens/login.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 1000vh;
+}
+
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  padding: 10px 0px;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 25px;
+  /* ease 시리즈 설명
+  ease ; 천천-빠름-천천
+  linear ; 등속
+  ease-in ; 천천-보통
+  ease-out ; 보통-천천
+  ease-in-out ; 천천-보통-천천
+  cubic-bezier ; 커스텀
+  steps ; 뚝뚝 끊어 보여준다 */
+}
+
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+/* not을 input type이 submit인 애들은 스타일을 적용시키지 않겠다 라는 문법  */
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}
+
+/* reset css 적용법
+ reset.css파일을 따로 만들어서 import로 넣어준다.
+ @import "reset.css"; reset css는 구글 검색하면 2.0 나온다 그거 긁어오면됨 */
