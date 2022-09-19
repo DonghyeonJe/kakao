@@ -1,15 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;600&display=swap");
 @import "reset.css";
 @import "variables.css";
+
 /* Components */
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+
 /* Screens */
 @import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
 
 body {
   font-family: "Open Sans", sans-serif;
   height: 1000vh;
+  color: #2e363e;
 }
 
 .welcome-header {
@@ -79,3 +89,7 @@ body {
 /* reset css 적용법
  reset.css파일을 따로 만들어서 import로 넣어준다.
  @import "reset.css"; reset css는 구글 검색하면 2.0 나온다 그거 긁어오면됨 */
+
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
